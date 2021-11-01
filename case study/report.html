@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ball</title>
+</head>
+
+<body>
+    <canvas id="thisCanvas" width="800px" height="800px" style="border:1px solid #d3d3d3;"></canvas>
+    <script>
+
+        let canvas = document.getElementById('thisCanvas');
+        let ctx = canvas.getContext('2d');
+        let distanceMove = 50;
+
+        class Bar {
+            constructor() {
+                this.xBar = 0;
+                this.yBar = 750;
+                this.widthBar = 100;
+                this.heightBar = 20;
+
+            }
+            drawBarMove() {
+                ctx.beginPath();
+                ctx.fillStyle = '#fa4b2a';
+                ctx.fillRect(this.xBar, this.yBar, this.widthBar, this.heightBar);
+            }
+
+            barMoveRight() {//khi di chuyen sang ben phai
+                ctx.clearRect(this.xBar, this.yBar, this.widthBar, this.heightBar);
+                //kiểm tra xem chạm biên bên phải chưa
+                if (this.xBar + this.widthBar < canvas.offsetWidth) {
+                    this.xBar += distanceMove;
+                } else {
+                    this.xBar = canvas.offsetWidth - this.widthBar;
+                }
+                // drawBarMove();
+                ctx.beginPath();
+                ctx.fillStyle = '#fa4b2a';
+                ctx.fillRect(this.xBar, this.yBar, this.widthBar, this.heightBar);
+            }
+
+
+            barMoveLeft() {
+                ctx.clearRect(this.xBar, this.yBar, this.widthBar, this.heightBar);
+                if (this.xBar <= 0) { //kiểm tra xem chạm biên bên trái chưa
+                    this.xBar = 0
+                } else {
+                    this.xBar -= distanceMove;
+                }
+                // drawBarMove();
+                ctx.beginPath();
+                ctx.fillStyle = '#fa4b2a';
+                ctx.fillRect(this.xBar, this.yBar, this.widthBar, this.heightBar);
+            }
+        }
+
+
+        let bar = new Bar();
+        bar.drawBarMove();
+        addEventListener('keydown', function (event) {
+            if (event.keyCode == 37) {
+                bar.barMoveLeft();
+            } else
+            if (event.keyCode == 39) {
+                bar.barMoveRight();
+                }
+        });
+
+
+
+
+    </script>
+</body>
+
+</html>
