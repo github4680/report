@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Điểm đại học</title>
+</head>
+
+<body>
+    <h3>Tính điểm đại học khối D</h3>
+    <p>Môn Toán <input type="number" name='toan' id='toan'> </p>
+    <p>Môn Văn <input type="number" name='van' id='van'> </p>
+    <p>Môn Anh <input type="number" name='anh' id='anh'> </p>
+    <p>Khu Vực
+        <select name="area" id='area'>
+            <option value="kv1">KV1</option>
+            <option value="kv2">KV2</option>
+            <option value="kv3">KV3</option>
+        </select>
+    </p>
+    <button id="total">Tổng Điểm</button>
+    <span id="result"></span>
+
+    <script>
+        total.addEventListener('click', function () {
+            let toan = document.getElementById('toan').value;
+            let van = document.getElementById('van').value;
+            let anh = document.getElementById('anh').value;
+            let area = document.getElementById('area');
+            let total = document.getElementById('total');
+            let result = document.getElementById('result');
+            let plus;
+            switch (area.value) {
+                case 'kv1': plus = 1; break;
+                case 'kv2': plus = 2; break;
+                case 'kv3': plus = 3; break;
+            }
+            
+            console.log(plus)
+            result.innerHTML = parseFloat(toan)+parseFloat(van)+parseFloat(anh)+plus;;
+        });
+    </script>
+</body>
+
+</html>

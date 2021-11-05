@@ -1,0 +1,8 @@
+#thisCanvas{
+   background-image: url(./hana.jpg);
+   background-size: 800px 800px;
+}  
+#thisCanvas2{
+   background-image: url(./tree.jpg);
+   background-size: 400px 800px;
+}

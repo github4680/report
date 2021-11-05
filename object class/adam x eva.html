@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>adamXapple</title>
+</head>
+
+<body>
+
+    <script>
+        class Apple {
+            constructor() {
+                this.weight = 9;
+            }
+            decrease() {
+                this.weight--;
+            }
+            isEmpty() {
+                if (this.weight == 0) {
+                    return false;
+                } else {
+                    return true;
+                }
+            }
+
+            getWeight() {
+                return this.weight;
+            }
+        }
+
+        class Human {
+            constructor(name, gender, weight) {
+
+                this.name = name;
+                this.gender = gender;
+                this.weight = weight;
+            }
+            human() {
+                return this.name;
+            }
+            isMale() {
+                return this.gender;
+            }
+            setWeight() {
+                return this.weight;
+            }
+            eat() {
+                if ( apple.isEmpty() ) {
+                    apple.decrease();
+                    apple.getWeight();
+                    this.weight++;
+                    console.log(this.name + ' ăn 1 miếng táo')
+                } else {
+                    console.log('hết táo rồi!!');
+                }
+            }
+            getWeight() {
+                return this.weight;
+            }
+            display() {
+                console.log(this.name + ' ' + this.gender + ' ' + this.weight + ' kg');
+            }
+        }
+
+        let apple = new Apple();
+        let human = new Human('adam', 'male', 50);
+        let human2 = new Human('eva', 'female', 40)
+        for (let x = 0; x < 6; x++) {
+            human.eat();
+            human2.eat();
+            console.log('táo còn:' + apple.getWeight());
+        }
+        console.log("</br>");
+        human.display();
+        human2.display();
+
+    </script>
+</body>
+
+</html>

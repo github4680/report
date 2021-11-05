@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>function_3_1</title>
+</head>
+<body>
+    <script>
+function reverseNumber(a) {
+            
+                 let arr = a.split('');
+                 let x = 0;
+                 let y = arr.length - 1;
+                 while (x < y) {
+                     if(arr[x]==arr[y]){
+                     x++; 
+                     y--;
+                 }else {
+                     return 'ko phai so doi xung';
+                    }
+                 return 'la so doi xung'; 
+        }
+    }
+         let number = prompt('nhap mot so');
+         console.log(reverseNumber(number))
+    </script>
+</body>
+</html>

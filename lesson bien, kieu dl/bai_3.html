@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tính lãi suất ngân hàng</title>
+</head>
+<body>
+    <script>
+        let tienGui = parseInt(prompt('nhập tiền gửi'));
+        let year = parseInt(prompt('Số năm gửi'));
+        const LAI = 0.069;
+        document.write('gửi ' + tienGui + ' trong ' + year + ' năm thì số tiền sau đó là :'
+        + (tienGui+(tienGui*year*LAI)) + ' đồng');
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>tinh so ngay trong 1 thang</h3>
+    <input type="number" id="month" placeholder="nhap thang">
+    <button id="check">check</button><br>
+
+    <script>
+
+        let check = document.getElementById("check");
+
+
+        check.addEventListener("click", function () {
+            let month = parseInt(document.getElementById('month').value);
+
+            switch (month) {
+                case 1:;
+                case 3:;
+                case 5:;
+                case 7:;
+                case 8:;
+                case 10:;
+                case 12:
+                alert('31 ngay'); break;
+                case 2: alert('28 hoac 29 ngay'); break;
+                case 4:
+                case 6:
+                case 9:
+                case 11: alert('30 ngay'); break;
+                default: alert('Ngay khong hop le'); break;
+            }
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <select name="fruit" id="fruit">
+        <option value="oi">Ổi</option>
+        <option value="dua">Dưa Hấu</option>
+        <option value="tao">Táo</option>
+        <option value="xoai">Xoài</option>
+        <option value="cam">Cam</option>
+        <option value="chom">Chôm Chôm</option>
+        <option value="mang">Măng Cụt</option>
+    </select>
+    <button id="check">check gia</button><br>
+    <span id="result"></span>
+
+    <script>
+        let Fruit = document.getElementById('fruit');
+        let result = document.getElementById('result');
+        Fruit.addEventListener('change', function () {
+
+            switch (Fruit.value) {
+                case 'oi': result.innerHTML='10$';
+                    break;
+                case 'dua': result.innerHTML='20$';
+                    break;
+                case 'tao': result.innerHTML='30$';
+                    break;
+                case 'xoai': result.innerHTML='40$';
+                    break;
+                case 'cam': result.innerHTML='50$';
+                    break;;
+                case 'chom': result.innerHTML='60$';
+                    break;
+                case 'mang': result.innerHTML='70$';
+                    break;
+            }
+
+        })
+    </script>
+
+</body>
+
+</html>

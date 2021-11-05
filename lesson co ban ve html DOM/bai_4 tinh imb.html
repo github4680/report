@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>imb</title>
+</head>
+
+<body>
+    <h3>IMB</h3>
+    <input type="number" id="weigh" placeholder="can nang(kg)">
+    <input type="number" id="height" placeholder="chieu cao(m)">
+    <br>
+    <button id="checkImb">check</button>
+    <br>
+    <p id="result"></p>
+</body>
+
+<script>
+    /*document.getElementById("weigh").addEventListener('change', function () {
+        weigh = parseFloat(document.getElementById("weigh").value);
+    });
+    document.getElementById("height").addEventListener('change', function () {
+        heigh =parseFloat(document.getElementById("height").value);
+    });
+    let checkImb = document.getElementById("checkImb")
+    let result = document.getElementById("result");
+    */
+ 
+
+    checkImb.addEventListener("click", function () {
+        let weigh = parseFloat(document.getElementById("weigh").value);
+        let heigh =parseFloat(document.getElementById("height").value);
+        let x = weigh / heigh;
+        if (x > 40) {
+            result.innerText =weigh+":"+ "béo phì cấp độ III";
+        }
+        else if (35 <= x&& x< 40) {
+            result.innerText =weigh+":"+ "béo phì cấp độ II";
+        }
+        else if (30 <= x&& x < 35) {
+            result.innerText =weigh+":"+ "béo phì cấp độ II";
+        }
+        else if (25 <= x&& x < 20) {
+            result.innerText =weigh+":"+ " thừa cân";
+        }
+        else if (18.5 <= x&& x < 25) {
+            result.innerText =weigh+":"+ "bình thường";
+        }
+        else if (17 <= x&& x < 18.5) {
+            result.innerText =weigh+":"+ "gầy cấp độ I";
+        }
+        else if (16 <= x&& x < 17) {
+            result.innerText =weigh+":"+ "gầy cấp độ II";
+        }
+        else if (x< 16) {
+            result.innerText =weigh+":"+ "gầy cấp độ III";
+        }
+    });
+</script>
+
+</html>

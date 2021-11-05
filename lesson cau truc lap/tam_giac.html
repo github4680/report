@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /*let sout = "";
+        let sout2="*****";
+        for (let x = 1; x < 5; x++) {
+            sout = sout + "*";
+            document.write(sout + "<br>");
+        }
+        document.write( "<br>");
+     for (let x = 1; x <5; x++) {
+            sout2 = sout2.slice(1);
+            document.write(sout2 + "<br>");
+        }*/
+        let n = 5;
+        for (let k = 1; k < n; k++) {
+            for (let x = n; x > k; x--) {
+                document.write('&nbsp;&nbsp;');
+            }
+            for (let y = 1; y <= k; y++) {
+                document.write('*');
+            }
+            document.write('<br>')
+        }
+        document.write('<br>')
+        for (let k =n-1;k>0; k--) {
+            for (let x = n; x > k; x--) {
+                document.write('&nbsp;&nbsp;');
+            }
+            for (let y = 1; y <= k; y++) {
+                document.write('*');
+            }
+            document.write('<br>')
+        }
+
+    </script>
+</body>
+
+</html>

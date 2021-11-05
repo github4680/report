@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function giai_thua(x) {
+            let result = 1;
+            for (let k = 1; k <= x; k++) {
+                result *= k;
+            }
+            return result;
+        }
+
+        let number = parseInt(prompt('nhap so tinh giai thua'));
+        document.write(giai_thua(number));
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dictionary</title>
+</head>
+
+<body>
+    <form action='#' method='post'>
+        <input name='word' type="text" id="input_word">
+        <input type="button" value="translate" id="translate">
+    </form>
+    <span id="result"></span>
+    <script>
+        let dictionary = [];
+        dictionary['cam'] = 'orange';
+        dictionary['tao'] = 'apple';
+        dictionary['chanh'] = 'lemon';
+        dictionary['chuoi'] = 'banana';
+        console.log(dictionary);
+
+        let inputWord = document.getElementById('input_word');
+        let result = document.getElementById('result');
+        let translate = document.getElementById('translate');
+
+        translate.addEventListener('click', function () {
+            //event.preventDefault();
+            let translate_word = 'tu vua nhap khong co';
+            let word = inputWord.value;
+            for (let index in dictionary) {
+                if (index == word) {
+                    translate_word = dictionary[index];
+                }
+                result.innerHTML = translate_word;
+            }
+        })
+
+
+    </script>
+</body>
+
+</html>
